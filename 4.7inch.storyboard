@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hGl-3H-eyZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jlp-Ph-dBN">
+            <objects>
+                <viewController id="hGl-3H-eyZ" customClass="ViewController" customModule="Postter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Giw-Xt-8KC"/>
+                        <viewControllerLayoutGuide type="bottom" id="oJc-AT-1mj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="idD-tp-5PF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLf-rc-rbl">
+                                <rect key="frame" x="-5" y="340" width="380" height="100"/>
+                                <state key="normal" image="Button②.png">
+                                    <color key="titleColor" red="0.98877346619999995" green="0.99021595159999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PhotoButton" destination="hGl-3H-eyZ" eventType="touchUpInside" id="AbT-eD-yoZ"/>
+                                    <segue destination="zjc-d2-djx" kind="presentation" id="3DU-dd-cKd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヘッダー.png" translatesAutoresizingMaskIntoConstraints="NO" id="qU9-U8-02j">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvQ-ar-egM">
+                                <rect key="frame" x="0.0" y="150" width="375" height="105"/>
+                                <state key="normal" image="Button①.png">
+                                    <color key="titleColor" red="0.98877346619999995" green="0.99021595159999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="TweetButton:" destination="hGl-3H-eyZ" eventType="touchUpInside" id="Yan-X8-9zc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uau-r1-yqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278.5" y="372.5"/>
+        </scene>
+        <!--Take a Photo View Controller-->
+        <scene sceneID="Gcd-Jv-0FW">
+            <objects>
+                <viewController id="zjc-d2-djx" customClass="Take_a_Photo_ViewController" customModule="Postter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RBW-w9-FvV"/>
+                        <viewControllerLayoutGuide type="bottom" id="kb2-oD-DmH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="05Q-GL-3i3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Rh-u7-MVb">
+                                <rect key="frame" x="0.0" y="622" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="XaX-OT-5P2">
+                                        <connections>
+                                            <action selector="share:" destination="zjc-d2-djx" id="CxO-tj-gS5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73U-0T-c3q">
+                                <rect key="frame" x="158" y="607" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="L6B-o0-IGU"/>
+                                    <constraint firstAttribute="height" constant="60" id="cak-RH-fkZ"/>
+                                </constraints>
+                                <state key="normal" image="maru" backgroundImage="maru"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="zjc-d2-djx" eventType="touchUpInside" id="BnD-Kj-Ytk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="73U-0T-c3q" firstAttribute="centerX" secondItem="05Q-GL-3i3" secondAttribute="centerX" id="9cl-dv-Rud"/>
+                            <constraint firstItem="73U-0T-c3q" firstAttribute="bottom" secondItem="kb2-oD-DmH" secondAttribute="top" id="Gwu-RC-72y"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="shareButton" destination="XaX-OT-5P2" id="pwf-WE-X8G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYv-eb-1AZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793.5" y="372.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button①.png" width="600" height="106"/>
+        <image name="Button②.png" width="607" height="101"/>
+        <image name="maru" width="60" height="60"/>
+        <image name="ヘッダー.png" width="600" height="65"/>
+    </resources>
+</document>

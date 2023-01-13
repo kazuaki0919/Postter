@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="e91-Ld-U06">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fEs-qC-upr">
+            <objects>
+                <viewController id="e91-Ld-U06" customClass="ViewController" customModule="Postter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qeD-7p-7Sc"/>
+                        <viewControllerLayoutGuide type="bottom" id="KcO-Ev-GIc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qjL-ga-2s5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ヘッダー.png" translatesAutoresizingMaskIntoConstraints="NO" id="6yj-R6-hhx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-9g-HhT">
+                                <rect key="frame" x="0.0" y="150" width="320" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Button①.png"/>
+                                <connections>
+                                    <action selector="TweetButton:" destination="e91-Ld-U06" eventType="touchUpInside" id="eZx-RB-BFG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAE-ci-CQz">
+                                <rect key="frame" x="-4" y="329" width="324" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Button②.png"/>
+                                <connections>
+                                    <action selector="PhotoButton" destination="e91-Ld-U06" eventType="touchUpInside" id="sHA-TG-GuF"/>
+                                    <segue destination="dbs-hU-6Lt" kind="presentation" id="mPE-GH-5aA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ooq-OH-LVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="291" y="332"/>
+        </scene>
+        <!--Take a Photo View Controller-->
+        <scene sceneID="MO8-fr-ti1">
+            <objects>
+                <viewController id="dbs-hU-6Lt" customClass="Take_a_Photo_ViewController" customModule="Postter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UPQ-fy-fJt"/>
+                        <viewControllerLayoutGuide type="bottom" id="mms-Rl-eqa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xa2-Hj-ofb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Amv-Jc-UcW">
+                                <rect key="frame" x="0.0" y="524" width="321" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="awz-yW-VtD">
+                                        <connections>
+                                            <action selector="share:" destination="dbs-hU-6Lt" id="Zvi-bh-khR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9e-5s-OrD">
+                                <rect key="frame" x="130" y="508" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5Wt-Bd-azU"/>
+                                    <constraint firstAttribute="height" constant="60" id="c7E-OA-GMF"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="maru"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="dbs-hU-6Lt" eventType="touchUpInside" id="gcD-jl-bFX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N9e-5s-OrD" firstAttribute="centerX" secondItem="xa2-Hj-ofb" secondAttribute="centerX" id="hj5-qr-GsD"/>
+                            <constraint firstItem="N9e-5s-OrD" firstAttribute="bottom" secondItem="mms-Rl-eqa" secondAttribute="top" id="jCa-Ss-Gf9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="shareButton" destination="awz-yW-VtD" id="o5m-B8-g1X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAR-OV-lOt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="332"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button①.png" width="600" height="106"/>
+        <image name="Button②.png" width="607" height="101"/>
+        <image name="maru" width="60" height="60"/>
+        <image name="ヘッダー.png" width="600" height="65"/>
+    </resources>
+</document>
